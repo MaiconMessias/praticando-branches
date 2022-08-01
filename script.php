@@ -1,9 +1,11 @@
 <?php
 
-$categorias = [];
-$categorias[] = 'infantil';
-$categorias[] = 'adolecente';
-$categorias[] = 'adulto';
+    session_start();
+
+    $categorias = [];
+    $categorias[] = 'infantil';
+    $categorias[] = 'adolecente';
+    $categorias[] = 'adulto';
 
 $nome = $_POST['nome'];
 $idade = $_POST['idade'];
@@ -14,25 +16,28 @@ var_dump($idade);
 */
 
 if(empty($nome)){
-    echo 'O nome não pode ser vazio';
+    $_SESSION['mensagem-de-erro'] = 'O nome não pode ser vazio';
+    header('location: index.php');
     return;
 }
 
-if(strlen($nome) < 3){
-    echo 'O nome deve conter mais de 3 caracteres';
+else if(strlen($nome) < 3){
+    $_SESSION['mensagem-de-erro'] = 'O nome deve conter mais de 3 caracteres';
+    header('location: index.php');
     return;
 }
 
-if(strlen($nome) > 40){
-    echo 'O nome é muito extenso';
+else if(strlen($nome) > 40){
+    $_SESSION['mensagem-de-erro'] = 'O nome é muito extenso';
+    header('location: index.php');
     return;
 }
 
-if(!is_numeric($idade)){
-    echo 'A idade deve ser numérica';
+else if(!is_numeric($idade)){
+    $_SESSION['mensagem-de-erro'] = 'A idade deve ser numérica';
+    header('location: index.php');
     return;
 }
-
 
 if($idade >= 6 && $idade <= 12)
 {
