@@ -11,9 +11,9 @@ $numeroDaSequencia = 0;
 for ($i=0; $i < count($arrayDesordenado); $i++){
     $numeroDaSequencia = $arrayDesordenado[$i];
 
-    for ($j=$i; $j < count($arrayAux); $j++){
-        if ( ($numeroDaSequencia >= $arrayAux[$j]) ) {
-            $numeroDaSequencia = $arrayAux[$j];
+    for ($j=$i; $j < count($arrayDesordenado); $j++){
+        if ( ($numeroDaSequencia >= $arrayDesordenado[$j]) ) {
+            $numeroDaSequencia = $arrayDesordenado[$j];
             $indice = $j;
         }
     }    
@@ -21,8 +21,6 @@ for ($i=0; $i < count($arrayDesordenado); $i++){
     $maior = $arrayDesordenado[$i];
     $arrayDesordenado[$i] = $numeroDaSequencia;
     $arrayDesordenado[$indice] = $maior;
-    $arrayAux = $arrayDesordenado;
-    $arrayOrdenado[$i] = $numeroDaSequencia;
     
     //$arrayOrdenado[$i] = $numeroDaSequencia;
     //array_splice($arrayAux, $indice, 1);
@@ -32,13 +30,7 @@ for ($i=0; $i < count($arrayDesordenado); $i++){
 }
 //print_r($arrayDesordenado);
 echo 'Array Ordenado 1: ';
-print_r($arrayOrdenado);
-echo '<br />';
-echo 'Array Ordenado 2: ';
 print_r($arrayDesordenado);
-echo '<br />';
-echo 'Array Ordenado 3: ';
-print_r($arrayAux);
 echo '<br />';
 
 /*------------------------------------------------*/
