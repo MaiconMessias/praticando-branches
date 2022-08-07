@@ -33,6 +33,13 @@ for ($i=0; $i < count($arrayDesordenado); $i++){
 //print_r($arrayDesordenado);
 echo 'Array Ordenado 1: ';
 print_r($arrayOrdenado);
+echo '<br />';
+echo 'Array Ordenado 2: ';
+print_r($arrayDesordenado);
+echo '<br />';
+echo 'Array Ordenado 3: ';
+print_r($arrayAux);
+echo '<br />';
 
 /*------------------------------------------------*/
 /* reinicializando as variaveis
@@ -62,7 +69,7 @@ for ($i=0; $i < count($arrayDesordenado); $i++){
 }
 
 echo '<br />';
-echo 'Array Ordenado 2: ';
+echo 'Array Ordenado 4: ';
 print_r($arrayOrdenado);
 
 
