@@ -63,6 +63,3 @@ for ($i=0; $i < count($arrayDesordenado); $i++){
 echo '<br />';
 echo 'Array Ordenado 4: ';
 print_r($arrayOrdenado);
-
-
-
