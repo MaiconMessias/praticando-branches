@@ -1,0 +1,19 @@
+{
+    "name": "windows10/gera-pdf",
+    "description": "sistema para gerar pdf",
+    "autoload": {
+        "psr-4": {
+            "Windows10\\GeraPdf\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "MaiconMessias",
+            "email": "32047156+MaiconMessias@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "ext-gd": "*",
+        "mpdf/mpdf": "^8.1"
+    }
+}
